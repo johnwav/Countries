@@ -1,0 +1,32 @@
+.nav {
+  max-width: 1440px;
+  margin: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  height: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > h1 {
+  font-size: 24px;
+}
+
+.line {
+  max-width: 1440px;
+  height: 3px;
+  background: hsl(0, 0%, 52%);
+  opacity: 0.2;
+}
+.container .right {
+  display: flex;
+}
+.container .right > span {
+  font-weight: 600;
+  padding-left: 10px;
+}
