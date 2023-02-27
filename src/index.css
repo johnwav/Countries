@@ -13,3 +13,8 @@ h1 {
   text-decoration: none;
 }
 
+button{
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
