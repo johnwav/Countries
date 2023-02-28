@@ -1,10 +1,10 @@
 import styles from "./Navbar.module.css";
 import moon from "../../assets/moon-solid.svg";
 import { useContext } from "react";
-import { themeContext } from "../../Context/themeContext";
+import { ThemeContext } from "../../Context/themeContext";
 
 export const Navbar = () => {
-  const { theme, setTheme } = useContext(themeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
@@ -13,8 +13,10 @@ export const Navbar = () => {
     }
   };
 
-  return (
-    <div className={styles.nav}>
+
+
+  return ( 
+    <div className={theme==='dark'? styles.navDark :styles.nav}>
       <div className={styles.container}>
         <h1>Where in the world?</h1>
         <button className={styles.right} onClick={toggleTheme}>

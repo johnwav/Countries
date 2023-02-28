@@ -2,6 +2,14 @@
   max-width: 1440px;
   margin: auto;
   display: block;
+  background-color:hsl(0, 0%, 100%);
+}
+
+.navDark {
+  max-width: 1440px;
+  margin: auto;
+  display: block;
+  background-color: hsl(209, 23%, 22%) ;
 }
 
 .container {
