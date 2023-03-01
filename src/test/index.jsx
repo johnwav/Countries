@@ -5,7 +5,7 @@ import styles from "./test.module.css";
 import { DataContext } from "../Context/dataContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import getPosts from "../Features/getPosts";
-import data from '../data/data.json'
+
 
 export const Test = () => {
   const { countries, setCountries } = useContext(DataContext);
@@ -15,7 +15,6 @@ export const Test = () => {
     setNumber(number + 20);
   };
 
-  {console.log(data.length)}
 
   return (
     <center className={styles.container}>
@@ -43,4 +42,5 @@ export const Test = () => {
       </InfiniteScroll>
     </center>
   );
+
 };

@@ -7,7 +7,6 @@ function getPosts(number) {
         ret.push(data[i]);
       }
     }
-    console.log(ret);
     return ret;
   }
 }

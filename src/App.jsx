@@ -3,7 +3,6 @@ import "./App.css";
 import { Test } from "./test";
 import { ThemeContext } from "./Context/themeContext";
 import { DataContext } from "./Context/dataContext";
-import data from "./data/data.json";
 import getPosts from "./Features/getPosts";
 
 function App() {
