@@ -3,6 +3,7 @@ import "./App.css";
 import { Test } from "./test";
 import { ThemeContext } from "./Context/themeContext";
 import { DataContext } from "./Context/dataContext";
+import data from "./data/data.json";
 import getPosts from "./Features/getPosts";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   }, [theme]);
 
 
-  const [countries, setCountries] = useState(getPosts(5));
+  const [countries, setCountries] = useState(data);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

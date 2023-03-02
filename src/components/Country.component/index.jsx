@@ -4,6 +4,7 @@ import { useContext } from "react";
 export const Country = (props) => {
   const Name = props.name;
   const Flag = props.flag;
+  const Region = props.region
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -17,7 +18,7 @@ export const Country = (props) => {
           <strong>Population:</strong> 92382983923
         </div>
         <div>
-          <strong>Region:</strong> Europe
+          <strong>Region:</strong> {Region}
         </div>
         <div>
           <strong>Capital:</strong> Berlin
