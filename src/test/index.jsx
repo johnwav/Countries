@@ -90,9 +90,7 @@ export const Test = () => {
         ))}
       </div>
       {/* </InfiniteScroll> */}
-      <br />
-      <br />
-      <br />
+ 
     </center>
   );
 };
