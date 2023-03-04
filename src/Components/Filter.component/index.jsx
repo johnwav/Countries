@@ -4,6 +4,7 @@ export const Filter = (props) => {
   const onFilterChange = (e) => {
     props.filterValueSelected(e.target.value);
   };
+
   return (
     <>
       <select className={styles.dropdown} onChange={onFilterChange}>

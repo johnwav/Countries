@@ -1,0 +1,43 @@
+.searchBar {
+  height: 56px;
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.searchBarDark {
+  height: 56px;
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: hsl(209, 23%, 22%);
+}
+
+.searchBar > div {
+  position: absolute;
+  width: 76px;
+  left: 0;
+}
+
+.searchBar > div > svg {
+  width: 20px;
+}
+
+.inputFeild {
+  height: inherit;
+  width: inherit;
+  padding-left: 72px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.inputFeildDark {
+  height: inherit;
+  width: inherit;
+  padding-left: 72px;
+  background-color: hsl(209, 23%, 22%);
+}

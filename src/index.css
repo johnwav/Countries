@@ -18,3 +18,8 @@ button{
   border: none;
   cursor: pointer;
 }
+
+input {
+  background-color: inherit;
+  border: none;
+}

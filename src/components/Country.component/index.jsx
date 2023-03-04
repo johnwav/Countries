@@ -5,6 +5,8 @@ export const Country = (props) => {
   const Name = props.name;
   const Flag = props.flag;
   const Region = props.region
+  const Capital = props.capital
+  const Population = props.population
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -15,13 +17,14 @@ export const Country = (props) => {
       <h1 className={styles.countryName}>{Name}</h1>
       <div className={styles.details}>
         <div>
-          <strong>Population:</strong> 92382983923
+          <strong>Population:</strong> {Population}
         </div>
+        
         <div>
           <strong>Region:</strong> {Region}
         </div>
         <div>
-          <strong>Capital:</strong> Berlin
+          <strong>Capital:</strong> {Capital}
         </div>
       </div>
     </div>
