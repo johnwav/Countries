@@ -17,7 +17,7 @@ export const Country = (props) => {
       <h1 className={styles.countryName}>{Name}</h1>
       <div className={styles.details}>
         <div>
-          <strong>Population:</strong> {Population}
+          <strong>Population:</strong> {Population.toLocaleString()}
         </div>
         
         <div>

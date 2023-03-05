@@ -8,8 +8,14 @@ import { Searchbar } from "../Components/Searchbar.component";
 
 export const Test = () => {
   const { countries, setCountries } = useContext(DataContext);
+  const [query, setQuery] = useState();
   const [filter, setFilter] = useState("All");
+
   const filterdList = countries.filter((item) => {
+    if(query) {
+      return item.name.toLowerCase().includes(query.toLowerCase())
+    }
+
     if (filter === "All") return countries;
     else return item.region.includes(filter);
   });
@@ -18,13 +24,16 @@ export const Test = () => {
     setFilter(filterValue);
   };
 
+  const handleSearch = (input) => {
+    setQuery(input)
+  };
 
   return (
     <center className={styles.container}>
       <h1>This is a test for componets</h1>
       <Filter filterValueSelected={filterValueChange} />
       <Navbar />
-      <Searchbar />
+      <Searchbar searchMethod={handleSearch} />
       <div className={styles.contries}>
         {filterdList.map((country, i) => (
           <>
@@ -35,7 +44,6 @@ export const Test = () => {
               region={country.region}
               population={country.population}
               capital={country.capital}
-
             />
           </>
         ))}
