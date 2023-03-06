@@ -1,0 +1,22 @@
+.Container {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 46px;
+}
+
+
+.Container > .buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;
+}
+
+.contries{
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 72px;
+    column-gap: 64px;
+    margin-top: 46px;
+  }
+

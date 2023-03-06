@@ -5,6 +5,7 @@ import { ThemeContext } from "../../Context/themeContext";
 
 export const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");

@@ -6,20 +6,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 h1 {
   text-decoration: none;
 }
 
-button{
-  background-color: inherit;
+button {
+  /* background-color: inherit; */
   border: none;
   cursor: pointer;
+  margin: 0;
+  background: transparent;
+  padding: 0;
 }
 
 input {
-  background-color: inherit;
+  /* background-color: inherit; */
   border: none;
 }

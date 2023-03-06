@@ -1,0 +1,19 @@
+.back{
+    width: 138px;
+    height: 40px;
+    background-color: hsl(0, 0%, 100%);
+    color: inherit;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 1px rgb(173, 173, 173);
+
+}
+
+.backDark {
+    width: 138px;
+    height: 40px;
+    background-color: hsl(209, 23%, 22%);
+    color: inherit;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 1px rgb(27, 27, 27);
+
+}

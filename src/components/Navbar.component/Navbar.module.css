@@ -36,9 +36,12 @@
 .container .right {
   display: flex;
   align-items: center;
+  color: inherit;
 }
 .container .right > span {
   font-weight: 600;
   font-size: 18px;
   padding-left: 10px;
+
 }
+

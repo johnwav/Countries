@@ -1,13 +1,17 @@
 import styles from "./Filter.module.css";
+import { ThemeContext } from "../../Context/themeContext";
+import { useContext } from "react";
 
 export const Filter = (props) => {
   const onFilterChange = (e) => {
     props.filterValueSelected(e.target.value);
   };
 
+  const { theme } =useContext(ThemeContext)
+
   return (
     <>
-      <select className={styles.dropdown} onChange={onFilterChange}>
+      <select className={theme==='dark'? styles.dropdownDark : styles.dropdown} onChange={onFilterChange}>
         <option value={"All"}>Filter by Region</option>
         <option value={"Africa"}>Africa</option>
         <option value={"America"}>America</option>
