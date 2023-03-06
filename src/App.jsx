@@ -9,14 +9,13 @@ import { Detail } from "./Pages/Detail";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Navbar } from "./Components/Navbar.component";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
   {
-    path: "country",
+    path: ":id",
     element: <Detail />,
   },
   {
@@ -35,11 +34,10 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <DataContext.Provider value={{ countries, setCountries }}>
-        <Navbar />
-        <RouterProvider router={router}>
-          <div className={`App ${theme}`}>
-          </div>
-        </RouterProvider>
+        <div className={`App ${theme}`}>
+          <Navbar />
+          <RouterProvider router={router}></RouterProvider>
+        </div>
       </DataContext.Provider>
     </ThemeContext.Provider>
   );

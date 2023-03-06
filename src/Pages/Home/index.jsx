@@ -4,6 +4,7 @@ import { Searchbar } from "../../Components/Searchbar.component";
 import styles from "./Home.module.css";
 import { DataContext } from "../../Context/dataContext";
 import { Country } from "../../Components/Country.component";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const { countries } = useContext(DataContext);
@@ -27,7 +28,7 @@ export const Home = () => {
     setQuery(input);
   };
 
-  return (  
+  return (
     <div className={styles.Container}>
       <div className={styles.buttons}>
         <Searchbar searchMethod={handleSearch} />
@@ -36,14 +37,16 @@ export const Home = () => {
 
       <div className={styles.contries}>
         {filterdList.map((country) => (
-          <Country
-            key={country.alpha3Code}
-            name={country.name}
-            flag={country.flag}
-            region={country.region}
-            population={country.population}
-            capital={country.capital}
-          />
+          <Link to={`/${country.alpha3Code}`}>
+            <Country
+              key={country.alpha3Code}
+              name={country.name}
+              flag={country.flag}
+              region={country.region}
+              population={country.population}
+              capital={country.capital}
+            />
+          </Link>
         ))}
       </div>
     </div>

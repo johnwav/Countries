@@ -1,9 +1,37 @@
 .container {
-    max-width: 1250px;
-    margin: auto;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.details {
+  display: flex;
+  margin-top: 70px;
+  line-height: 25px;
+}
+
+.detailsGroup {
+  margin-left: 116px;
+  width: 600px;
+  margin-top: 34px;
+}
+.detailsGroup > h1 {
+  margin-bottom: 46px;
+}
+
+.details > img {
+  width: 560px;
+  height: 400px;
 }
 
 .container > .navigation {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
+.hero {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.hero3 {
+  margin-top: 76px;
+}
