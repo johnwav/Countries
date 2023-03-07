@@ -9,7 +9,7 @@
 }
 
 .wrapperDark {
-  max-width: 264px;
+  width: 264px;
   height: 336px;
 
   background-color: hsl(209, 23%, 22%);

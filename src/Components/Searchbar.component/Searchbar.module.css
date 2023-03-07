@@ -7,7 +7,6 @@
   position: relative;
   color: inherit;
   border-radius: 5px;
-
 }
 
 .searchBar > div {
@@ -26,14 +25,12 @@
 
 .inputFeild {
   height: inherit;
-  width: inherit;
+  width: 480px;
   padding-left: 72px;
   background-color: hsl(20%, 0%, 100%);
   color: inherit;
   border-radius: 5px;
   box-shadow: 0px 0px 20px 1px rgb(173, 173, 173);
-
-
 }
 
 .inputFeildDark {
@@ -44,5 +41,16 @@
   color: inherit;
   border-radius: 5px;
   box-shadow: 0px 0px 20px 1px rgb(27, 27, 27);
+}
 
+@media only screen and (max-width: 600px) {
+  .searchBar {
+    max-width: 330px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .searchBar {
+    max-width: 250px;
+  }
 }

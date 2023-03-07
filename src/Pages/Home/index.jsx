@@ -37,9 +37,8 @@ export const Home = () => {
 
       <div className={styles.contries}>
         {filterdList.map((country) => (
-          <Link to={`/${country.alpha3Code}`}>
+          <Link to={`/${country.alpha3Code}`} key={country.alpha3Code}>
             <Country
-              key={country.alpha3Code}
               name={country.name}
               flag={country.flag}
               region={country.region}
