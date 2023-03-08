@@ -19,6 +19,7 @@ export const Detail = ({ data }) => {
     languages,
     borders,
   } = countries;
+
   return (
     <div className={styles.container}>
       <div className={styles.navigation}>
@@ -82,6 +83,16 @@ export const Detail = ({ data }) => {
                 ))}
               </div>
             </strong>
+
+            {/* 
+            <strong>
+              Border Countries:
+              <div className={styles.borderGroup}>
+                {borders?.map((border) => (
+                  <BorderCountry border={border} />
+                ))}
+              </div>
+            </strong> */}
           </div>
         </div>
       </div>
