@@ -1,10 +1,9 @@
 import { BackBtn } from "../../Components/Back.component";
 import styles from "./Detail.module.css";
-import data from "../../data/data.json";
 import { Link, useParams } from "react-router-dom";
-import { languages } from "monaco-editor";
+import { BorderCountry } from "../../Components/BorderCountries.component";
 
-export const Detail = () => {
+export const Detail = ({ data }) => {
   const { id } = useParams();
   const countries = data.find((country) => country.alpha3Code === id);
   const {
@@ -18,8 +17,8 @@ export const Detail = () => {
     currencies,
     topLevelDomain,
     languages,
+    borders,
   } = countries;
-
   return (
     <div className={styles.container}>
       <div className={styles.navigation}>
@@ -59,23 +58,30 @@ export const Detail = () => {
                 <strong>Top Level Domain: </strong>
                 {topLevelDomain}
               </p>
-              <p>
+              <div>
                 <strong>Currencies: </strong>
-                {Object.keys(currencies).map((key) => (
-                  <div>{currencies[key].name}</div>
+                {Object.keys(currencies).map((key, i) => (
+                  <div key={i}>{currencies[key].name.toString()}</div>
                 ))}
-              </p>
-              <p>
+              </div>
+              <div>
                 <strong>Languages: </strong>
-                {Object.keys(languages).map((key) => (
-                  <div>{languages[key].name}</div>
+                {Object.keys(languages).map((key, i) => (
+                  <div key={i}>{languages[key].name}</div>
                 ))}
-              </p>
+              </div>
             </div>
           </div>
 
           <div className={styles.hero3}>
-            <strong>Border Countries:</strong>
+            <strong>
+              Border Countries:
+              <div className={styles.borderGroup}>
+                {borders?.map((border) => (
+                  <BorderCountry border={border} />
+                ))}
+              </div>
+            </strong>
           </div>
         </div>
       </div>

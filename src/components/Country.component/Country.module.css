@@ -2,7 +2,7 @@
   width: 264px;
   height: 336px;
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 0px 0px 20px 1px rgb(173, 173, 173);
+  box-shadow: 0px 0px 10px 1px rgb(173, 173, 173);
 
   /* min-width: 530px;
     min-height: 636px; */
@@ -13,7 +13,7 @@
   height: 336px;
 
   background-color: hsl(209, 23%, 22%);
-  box-shadow: 0px 0px 20px 1px rgb(27, 27, 27);
+  box-shadow: 0px 0px 10px 1px rgb(27, 27, 27);
 }
 
 .flagWrapper {
