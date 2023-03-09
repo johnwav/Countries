@@ -36,6 +36,7 @@
 
 .hero3 {
   margin-top: 76px;
+  padding-bottom: 100px;
 }
 
 .borderGroup {
@@ -89,6 +90,10 @@
   .details > img {
     max-width: 366px;
     max-height: 264px;
+  }
+
+  .borderGroup {
+    grid-template-columns: auto auto ;
   }
 }
 
