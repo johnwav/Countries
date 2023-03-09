@@ -4,8 +4,6 @@
   padding-inline: 15px;
 }
 
-
-
 .details {
   display: grid;
   grid-template-columns: auto auto;
@@ -42,13 +40,11 @@
 
 .borderGroup {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   row-gap: 20px;
-
 }
 
 @media only screen and (max-width: 1080px) {
-
   .details {
     grid-template-columns: auto;
     align-items: center;
@@ -83,6 +79,10 @@
     max-width: 406px;
     max-height: 294px;
   }
+
+  .borderGroup {
+    grid-template-columns: auto auto auto;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -92,12 +92,9 @@
   }
 }
 
-
 @media only screen and (max-width: 480px) {
   .details > img {
     max-width: 292px;
     max-height: 211px;
   }
 }
-
-

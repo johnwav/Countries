@@ -20,6 +20,18 @@ export const Detail = ({ data }) => {
     borders,
   } = countries;
 
+  const borderCountries = borders?.map((border) => {
+    if (borders !== undefined) {
+      return data?.find((country) => country?.alpha3Code === border);
+    }
+  });
+
+  const filtered = borderCountries?.filter((x) => {
+    if (borderCountries !== undefined) {
+      return x !== undefined;
+    } else return "";
+  });
+
   return (
     <div className={styles.container}>
       <div className={styles.navigation}>
@@ -78,21 +90,18 @@ export const Detail = ({ data }) => {
             <strong>
               Border Countries:
               <div className={styles.borderGroup}>
-                {borders?.map((border) => (
-                  <BorderCountry border={border} />
-                ))}
+                {filtered !== undefined
+                  ? filtered?.map((filter) => (
+                      <Link to={`/${filter.alpha3Code}`} key={filter.alpha3Code}>
+                        <BorderCountry
+                          name={filter.name}
+                          border={borders}
+                        />
+                      </Link>
+                    ))
+                  : "N/A"}
               </div>
             </strong>
-
-            {/* 
-            <strong>
-              Border Countries:
-              <div className={styles.borderGroup}>
-                {borders?.map((border) => (
-                  <BorderCountry border={border} />
-                ))}
-              </div>
-            </strong> */}
           </div>
         </div>
       </div>
