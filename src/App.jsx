@@ -22,6 +22,7 @@ const router = createBrowserRouter([
 
 function App() {
   const [theme, setTheme] = useState("light");
+  
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
