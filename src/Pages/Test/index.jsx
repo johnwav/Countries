@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Country } from "../../Components/Country.component";
 import { Navbar } from "../../Components/Navbar.component";
-import styles from "./Test.module.css";
+import styles from "./test.module.css";
 import { DataContext } from "../../Context/dataContext";
 import { Filter } from "../../Components/Filter.component";
 import { Searchbar } from "../../Components/Searchbar.component";
