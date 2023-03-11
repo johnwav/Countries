@@ -4,6 +4,7 @@ import { Navbar } from "../../Components/Navbar.component";
 import styles from "./test.module.css";
 import { DataContext } from "../../Context/dataContext";
 import { Filter } from "../../Components/Filter.component";
+import { Dropdown } from "../../Components/Dropdown.component";
 import { Searchbar } from "../../Components/Searchbar.component";
 import { BackBtn } from "../../Components/Back.component";
 
@@ -32,6 +33,8 @@ export const Test = () => {
   return (
     <center className={styles.container}>
       <h1>This is a test for componets</h1>
+
+      <Dropdown filterValueSelected={filterValueChange} />
       <Filter filterValueSelected={filterValueChange} />
       <Navbar />
       <Searchbar searchMethod={handleSearch} />
@@ -48,9 +51,6 @@ export const Test = () => {
           />
         ))}
       </div>
-
-
     </center>
-
   );
 };
