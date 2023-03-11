@@ -18,6 +18,10 @@ const router = createBrowserRouter([
     path: ":id",
     element: <Detail data={data}/>,
   },
+  {
+    path: "test",
+    element: <Test data={data}/>,
+  },
 ]);
 
 function App() {
